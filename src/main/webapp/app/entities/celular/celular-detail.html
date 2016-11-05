@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="acaipdejhipsterApp.celular.detail.title">Celular</span> {{vm.celular.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="acaipdejhipsterApp.celular.numero">Numero</span></dt>
+        <dd>
+            <span>{{vm.celular.numero}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.celular.operadora">Operadora</span></dt>
+        <dd>
+            <span>{{vm.celular.operadora}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.celular.estabelecimento">Estabelecimento</span></dt>
+        <dd>
+            <a ui-sref="estabelecimento-detail({id:vm.celular.estabelecimentoId})">{{vm.celular.estabelecimentoId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="celular-detail.edit({id:vm.celular.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,126 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myEstabelecimentoLabel" data-translate="acaipdejhipsterApp.estabelecimento.home.createOrEditLabel">Create or edit a Estabelecimento</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.estabelecimento.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.estabelecimento.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="acaipdejhipsterApp.estabelecimento.nome" for="field_nome">Nome</label>
+            <input type="text" class="form-control" name="nome" id="field_nome"
+                    ng-model="vm.estabelecimento.nome"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="acaipdejhipsterApp.estabelecimento.responsavel" for="field_responsavel">Responsavel</label>
+            <input type="text" class="form-control" name="responsavel" id="field_responsavel"
+                    ng-model="vm.estabelecimento.responsavel"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="acaipdejhipsterApp.estabelecimento.email" for="field_email">Email</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                    ng-model="vm.estabelecimento.email"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="acaipdejhipsterApp.estabelecimento.telefone" for="field_telefone">Telefone</label>
+            <input type="text" class="form-control" name="telefone" id="field_telefone"
+                    ng-model="vm.estabelecimento.telefone"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="acaipdejhipsterApp.estabelecimento.cep" for="field_cep">Cep</label>
+            <input type="text" class="form-control" name="cep" id="field_cep"
+                    ng-model="vm.estabelecimento.cep"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="acaipdejhipsterApp.estabelecimento.logradouro" for="field_logradouro">Logradouro</label>
+            <input type="text" class="form-control" name="logradouro" id="field_logradouro"
+                    ng-model="vm.estabelecimento.logradouro"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="acaipdejhipsterApp.estabelecimento.numero" for="field_numero">Numero</label>
+            <input type="text" class="form-control" name="numero" id="field_numero"
+                    ng-model="vm.estabelecimento.numero"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="acaipdejhipsterApp.estabelecimento.bairro" for="field_bairro">Bairro</label>
+            <input type="text" class="form-control" name="bairro" id="field_bairro"
+                    ng-model="vm.estabelecimento.bairro"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="acaipdejhipsterApp.estabelecimento.cidade" for="field_cidade">Cidade</label>
+            <input type="text" class="form-control" name="cidade" id="field_cidade"
+                    ng-model="vm.estabelecimento.cidade"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="acaipdejhipsterApp.estabelecimento.uf" for="field_uf">Uf</label>
+            <input type="text" class="form-control" name="uf" id="field_uf"
+                    ng-model="vm.estabelecimento.uf"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="acaipdejhipsterApp.estabelecimento.descricao" for="field_descricao">Descricao</label>
+            <input type="text" class="form-control" name="descricao" id="field_descricao"
+                    ng-model="vm.estabelecimento.descricao"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="acaipdejhipsterApp.estabelecimento.latitude" for="field_latitude">Latitude</label>
+            <input type="number" class="form-control" name="latitude" id="field_latitude"
+                    ng-model="vm.estabelecimento.latitude"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="acaipdejhipsterApp.estabelecimento.longitude" for="field_longitude">Longitude</label>
+            <input type="number" class="form-control" name="longitude" id="field_longitude"
+                    ng-model="vm.estabelecimento.longitude"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="acaipdejhipsterApp.estabelecimento.uRLimagem" for="field_uRLimagem">U R Limagem</label>
+            <input type="text" class="form-control" name="uRLimagem" id="field_uRLimagem"
+                    ng-model="vm.estabelecimento.uRLimagem"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="acaipdejhipsterApp.estabelecimento.status" for="field_status">Status</label>
+            <input type="text" class="form-control" name="status" id="field_status"
+                    ng-model="vm.estabelecimento.status"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="acaipdejhipsterApp.estabelecimento.dataAtualizacaoPreco" for="field_dataAtualizacaoPreco">Data Atualizacao Preco</label>
+                <div class="input-group">
+                    <input id="field_dataAtualizacaoPreco" type="text" class="form-control" name="dataAtualizacaoPreco" datetime-picker="{{dateformat}}" ng-model="vm.estabelecimento.dataAtualizacaoPreco" is-open="vm.datePickerOpenStatus.dataAtualizacaoPreco"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dataAtualizacaoPreco')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

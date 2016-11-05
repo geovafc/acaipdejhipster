@@ -1,0 +1,27 @@
+{
+    "acaipdejhipsterApp": {
+        "horarioFuncionamento" : {
+            "home": {
+                "title": "Horario Funcionamentos",
+                "createLabel": "Criar novo Horario Funcionamento",
+                "createOrEditLabel": "Criar ou editar Horario Funcionamento",
+                "search": "Pesquisar por Horario Funcionamento"
+            },
+            "created": "Um novo Horario Funcionamento é criado com o identificador {{ param }}",
+            "updated": "Um Horario Funcionamento é atualizado com o identificador {{ param }}",
+            "deleted": "Um Horario Funcionamento é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Horario Funcionamento {{ id }}?"
+            },
+            "detail": {
+                "title": "Horario Funcionamento"
+            },
+            "diaInicio": "Dia Inicio",
+            "diaFim": "Dia Fim",
+            "horarioInicio": "Horario Inicio",
+            "horarioFim": "Horario Fim",
+            "delivery": "Delivery",
+            "estabelecimento": "Estabelecimento"
+        }
+    }
+}

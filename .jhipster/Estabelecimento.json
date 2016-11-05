@@ -1,0 +1,94 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "produto",
+            "otherEntityName": "produto",
+            "otherEntityRelationshipName": "estabelecimento"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "celular",
+            "otherEntityName": "celular",
+            "otherEntityRelationshipName": "estabelecimento"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "horariofuncionamento",
+            "otherEntityName": "horarioFuncionamento",
+            "otherEntityRelationshipName": "estabelecimento"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "responsavel",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "telefone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cep",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "logradouro",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numero",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bairro",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cidade",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "uf",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descricao",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "latitude",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "longitude",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "uRLimagem",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dataAtualizacaoPreco",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20161016162213",
+    "dto": "mapstruct",
+    "service": "no",
+    "entityTableName": "estabelecimento",
+    "pagination": "infinite-scroll"
+}

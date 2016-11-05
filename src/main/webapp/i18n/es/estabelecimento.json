@@ -1,0 +1,40 @@
+{
+    "acaipdejhipsterApp": {
+        "estabelecimento" : {
+            "home": {
+                "title": "Estabelecimentos",
+                "createLabel": "Crear nuevo Estabelecimento",
+                "createOrEditLabel": "Crear o editar Estabelecimento",
+                "search": "Search for Estabelecimento"
+            },
+            "created": "Un nuevo Estabelecimento ha sido creado con el identificador {{ param }}",
+            "updated": "Un Estabelecimento ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Estabelecimento ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Estabelecimento {{ id }}?"
+            },
+            "detail": {
+                "title": "Estabelecimento"
+            },
+            "nome": "Nome",
+            "responsavel": "Responsavel",
+            "email": "Email",
+            "telefone": "Telefone",
+            "cep": "Cep",
+            "logradouro": "Logradouro",
+            "numero": "Numero",
+            "bairro": "Bairro",
+            "cidade": "Cidade",
+            "uf": "Uf",
+            "descricao": "Descricao",
+            "latitude": "Latitude",
+            "longitude": "Longitude",
+            "uRLimagem": "U R Limagem",
+            "status": "Status",
+            "dataAtualizacaoPreco": "Data Atualizacao Preco",
+            "produto": "Produto",
+            "celular": "Celular",
+            "horariofuncionamento": "Horariofuncionamento"
+        }
+    }
+}

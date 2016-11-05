@@ -1,0 +1,38 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "estabelecimento",
+            "otherEntityName": "estabelecimento",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "diaInicio",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "diaFim",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "horarioInicio",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "horarioFim",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "delivery",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20161016162216",
+    "dto": "mapstruct",
+    "service": "no",
+    "entityTableName": "horario_funcionamento",
+    "pagination": "infinite-scroll"
+}

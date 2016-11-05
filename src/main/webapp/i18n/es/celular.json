@@ -1,0 +1,24 @@
+{
+    "acaipdejhipsterApp": {
+        "celular" : {
+            "home": {
+                "title": "Celulars",
+                "createLabel": "Crear nuevo Celular",
+                "createOrEditLabel": "Crear o editar Celular",
+                "search": "Search for Celular"
+            },
+            "created": "Un nuevo Celular ha sido creado con el identificador {{ param }}",
+            "updated": "Un Celular ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Celular ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Celular {{ id }}?"
+            },
+            "detail": {
+                "title": "Celular"
+            },
+            "numero": "Numero",
+            "operadora": "Operadora",
+            "estabelecimento": "Estabelecimento"
+        }
+    }
+}

@@ -1,0 +1,86 @@
+<div>
+    <h2 data-translate="acaipdejhipsterApp.estabelecimento.home.title">Estabelecimentos</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="estabelecimento.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="acaipdejhipsterApp.estabelecimento.home.createLabel">
+                        Create new Estabelecimento
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.reset()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nome"><span data-translate="acaipdejhipsterApp.estabelecimento.nome">Nome</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="responsavel"><span data-translate="acaipdejhipsterApp.estabelecimento.responsavel">Responsavel</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="email"><span data-translate="acaipdejhipsterApp.estabelecimento.email">Email</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="telefone"><span data-translate="acaipdejhipsterApp.estabelecimento.telefone">Telefone</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="cep"><span data-translate="acaipdejhipsterApp.estabelecimento.cep">Cep</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="logradouro"><span data-translate="acaipdejhipsterApp.estabelecimento.logradouro">Logradouro</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="numero"><span data-translate="acaipdejhipsterApp.estabelecimento.numero">Numero</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="bairro"><span data-translate="acaipdejhipsterApp.estabelecimento.bairro">Bairro</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="cidade"><span data-translate="acaipdejhipsterApp.estabelecimento.cidade">Cidade</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="uf"><span data-translate="acaipdejhipsterApp.estabelecimento.uf">Uf</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="descricao"><span data-translate="acaipdejhipsterApp.estabelecimento.descricao">Descricao</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="latitude"><span data-translate="acaipdejhipsterApp.estabelecimento.latitude">Latitude</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="longitude"><span data-translate="acaipdejhipsterApp.estabelecimento.longitude">Longitude</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="uRLimagem"><span data-translate="acaipdejhipsterApp.estabelecimento.uRLimagem">U R Limagem</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="status"><span data-translate="acaipdejhipsterApp.estabelecimento.status">Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="dataAtualizacaoPreco"><span data-translate="acaipdejhipsterApp.estabelecimento.dataAtualizacaoPreco">Data Atualizacao Preco</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="vm.loadPage(vm.page + 1)" infinite-scroll-disabled="vm.page >= vm.links['last']">
+                <tr ng-repeat="estabelecimento in vm.estabelecimentos track by estabelecimento.id">
+                    <td><a ui-sref="estabelecimento-detail({id:estabelecimento.id})">{{estabelecimento.id}}</a></td>
+                    <td>{{estabelecimento.nome}}</td>
+                    <td>{{estabelecimento.responsavel}}</td>
+                    <td>{{estabelecimento.email}}</td>
+                    <td>{{estabelecimento.telefone}}</td>
+                    <td>{{estabelecimento.cep}}</td>
+                    <td>{{estabelecimento.logradouro}}</td>
+                    <td>{{estabelecimento.numero}}</td>
+                    <td>{{estabelecimento.bairro}}</td>
+                    <td>{{estabelecimento.cidade}}</td>
+                    <td>{{estabelecimento.uf}}</td>
+                    <td>{{estabelecimento.descricao}}</td>
+                    <td>{{estabelecimento.latitude}}</td>
+                    <td>{{estabelecimento.longitude}}</td>
+                    <td>{{estabelecimento.uRLimagem}}</td>
+                    <td>{{estabelecimento.status}}</td>
+                    <td>{{estabelecimento.dataAtualizacaoPreco | date:'medium'}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="estabelecimento-detail({id:estabelecimento.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="estabelecimento.edit({id:estabelecimento.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="estabelecimento.delete({id:estabelecimento.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span data-translate="acaipdejhipsterApp.horarioFuncionamento.detail.title">Horario Funcionamento</span> {{vm.horarioFuncionamento.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="acaipdejhipsterApp.horarioFuncionamento.diaInicio">Dia Inicio</span></dt>
+        <dd>
+            <span>{{vm.horarioFuncionamento.diaInicio}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.horarioFuncionamento.diaFim">Dia Fim</span></dt>
+        <dd>
+            <span>{{vm.horarioFuncionamento.diaFim}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.horarioFuncionamento.horarioInicio">Horario Inicio</span></dt>
+        <dd>
+            <span>{{vm.horarioFuncionamento.horarioInicio}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.horarioFuncionamento.horarioFim">Horario Fim</span></dt>
+        <dd>
+            <span>{{vm.horarioFuncionamento.horarioFim}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.horarioFuncionamento.delivery">Delivery</span></dt>
+        <dd>
+            <span>{{vm.horarioFuncionamento.delivery}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.horarioFuncionamento.estabelecimento">Estabelecimento</span></dt>
+        <dd>
+            <a ui-sref="estabelecimento-detail({id:vm.horarioFuncionamento.estabelecimentoId})">{{vm.horarioFuncionamento.estabelecimentoId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="horario-funcionamento-detail.edit({id:vm.horarioFuncionamento.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

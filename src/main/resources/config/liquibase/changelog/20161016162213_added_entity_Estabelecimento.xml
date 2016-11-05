@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="now" value="sysdate" dbms="oracle"/>
+
+    <property name="autoIncrement" value="true" dbms="mysql,h2,postgresql,oracle"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle"/>
+
+    <!--
+        Added the entity Estabelecimento.
+    -->
+    <changeSet id="20161016162213-1" author="jhipster">
+        
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="estabelecimento"/>
+            </not>
+        </preConditions>
+        
+        <createTable tableName="estabelecimento">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="nome" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="responsavel" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="email" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="telefone" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="cep" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="logradouro" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="numero" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="bairro" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="cidade" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="uf" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="descricao" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="latitude" type="double">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="longitude" type="double">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="u_r_limagem" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="status" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="data_atualizacao_preco" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="created_by" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_date" type="timestamp" defaultValueDate="${now}">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_modified_by" type="varchar(50)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            
+            <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
+        </createTable>
+        <dropDefaultValue tableName="estabelecimento" columnName="data_atualizacao_preco" columnDataType="datetime"/>
+        
+        
+    </changeSet>
+    
+    <changeSet id="20161016162213-2" author="Geovane">
+        
+                <preConditions onFail="MARK_RAN">
+            <not>
+                <columnExists tableName="estabelecimento"  columnName="created_by" />
+            </not>
+        </preConditions>
+        
+        <addColumn tableName="estabelecimento">
+            <column name="created_by" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+        
+<!--        <addcolumn tablename="estabelecimento">
+            <column name="created_date" type="timestamp" defaultValueDate="${now}">
+                <constraints nullable="false"/>
+            </column>
+        </addcolumn>
+        
+        <addcolumn tablename="estabelecimento">
+            <column name="last_modified_by" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+        </addcolumn>
+        
+<addcolumn tablename="estabelecimento">
+    <column name="last_modified_date" type="timestamp">
+        <constraints nullable="false"/>-->
+
+        <!--</column>-->
+        <!--</addcolumn>-->
+    </changeSet>
+    
+    <changeSet id="20161016162213-3" author="Geovane">
+        
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <columnExists tableName="estabelecimento"  columnName="created_date" />
+            </not>
+        </preConditions>
+        
+        <addColumn tableName="estabelecimento">
+            <column name="created_date" type="timestamp" defaultValueDate="${now}">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+        
+        <addColumn tableName="estabelecimento">
+            <column name="last_modified_by" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+        
+        <addColumn tableName="estabelecimento">
+            <column name="last_modified_date" type="timestamp">
+                <constraints nullable="false"/>
+
+            </column>
+        </addColumn>
+         
+    </changeSet>
+    
+<!--    <changeSet id="20161016162213-4" author="Geovane">
+        
+        
+        <renameColumn tableName="estabelecimento" oldColumnName="dataAtualizacaoPreco" newColumnName="data_atualizacao_preco" columnDataType ="DATETIME" />
+        <renameColumn tableName="estabelecimento"  oldColumnName="URLimagem" newColumnName="u_r_limagem" columnDataType="varchar(255)"/>
+    </changeSet>
+    
+    <changeSet id="20161016162213-5" author="Geovane">
+        
+        
+        <renameColumn tableName="estabelecimento" oldColumnName="data_atualizacao_preco" newColumnName="dataAtualizacaoPreco" columnDataType ="DATETIME" />
+        <renameColumn tableName="estabelecimento"  oldColumnName="u_r_limagem" newColumnName="URLimagem" columnDataType="varchar(255)"/>
+    </changeSet>
+    
+    <changeSet id="20161016162213-6" author="Geovane">
+        
+        
+        <renameColumn tableName="estabelecimento" oldColumnName="dataAtualizacaoPreco" newColumnName="data_atualizacao_preco" columnDataType ="DATETIME" />
+        <renameColumn tableName="estabelecimento"  oldColumnName="URLimagem" newColumnName="u_r_limagem" columnDataType="varchar(255)"/>
+    </changeSet>-->
+
+</databaseChangeLog>

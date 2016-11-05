@@ -1,0 +1,61 @@
+
+
+entity Estabelecimento{
+     id Integer,
+     nome String,
+     responsavel String,
+     email String,
+     telefone String,
+     cep String,
+     logradouro String,
+     numero String,
+     bairro String,
+     cidade String,
+     uf String,
+     descricao String,
+     latitude Double,
+     longitude Double,
+     URLimagem String,
+     status String,
+     dataAtualizacaoPreco ZonedDateTime
+}
+
+entity Produto{
+	id Integer,
+	nome String,
+    preco BigDecimal
+}
+
+entity Celular {
+id Integer,
+numero String,
+operadora String
+}
+
+entity HorarioFuncionamento{
+id Integer,
+diaInicio String,
+diaFim String,
+horarioInicio String,
+horarioFim String,
+delivery Boolean
+}
+
+
+
+relationship OneToMany {
+  Estabelecimento{produto} to Produto
+}
+
+relationship OneToMany {
+  Estabelecimento{celular} to Celular
+}
+
+relationship OneToMany {
+  Estabelecimento{horariofuncionamento} to HorarioFuncionamento
+}
+
+
+
+dto * with mapstruct
+paginate * with infinite-scroll

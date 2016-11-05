@@ -1,0 +1,26 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "estabelecimento",
+            "otherEntityName": "estabelecimento",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "preco",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "changelogDate": "20161016162214",
+    "dto": "mapstruct",
+    "service": "no",
+    "entityTableName": "produto",
+    "pagination": "infinite-scroll"
+}

@@ -1,0 +1,83 @@
+
+<div>
+    <h2><span data-translate="acaipdejhipsterApp.estabelecimento.detail.title">Estabelecimento</span> {{vm.estabelecimento.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="acaipdejhipsterApp.estabelecimento.nome">Nome</span></dt>
+        <dd>
+            <span>{{vm.estabelecimento.nome}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.estabelecimento.responsavel">Responsavel</span></dt>
+        <dd>
+            <span>{{vm.estabelecimento.responsavel}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.estabelecimento.email">Email</span></dt>
+        <dd>
+            <span>{{vm.estabelecimento.email}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.estabelecimento.telefone">Telefone</span></dt>
+        <dd>
+            <span>{{vm.estabelecimento.telefone}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.estabelecimento.cep">Cep</span></dt>
+        <dd>
+            <span>{{vm.estabelecimento.cep}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.estabelecimento.logradouro">Logradouro</span></dt>
+        <dd>
+            <span>{{vm.estabelecimento.logradouro}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.estabelecimento.numero">Numero</span></dt>
+        <dd>
+            <span>{{vm.estabelecimento.numero}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.estabelecimento.bairro">Bairro</span></dt>
+        <dd>
+            <span>{{vm.estabelecimento.bairro}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.estabelecimento.cidade">Cidade</span></dt>
+        <dd>
+            <span>{{vm.estabelecimento.cidade}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.estabelecimento.uf">Uf</span></dt>
+        <dd>
+            <span>{{vm.estabelecimento.uf}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.estabelecimento.descricao">Descricao</span></dt>
+        <dd>
+            <span>{{vm.estabelecimento.descricao}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.estabelecimento.latitude">Latitude</span></dt>
+        <dd>
+            <span>{{vm.estabelecimento.latitude}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.estabelecimento.longitude">Longitude</span></dt>
+        <dd>
+            <span>{{vm.estabelecimento.longitude}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.estabelecimento.uRLimagem">U R Limagem</span></dt>
+        <dd>
+            <span>{{vm.estabelecimento.uRLimagem}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.estabelecimento.status">Status</span></dt>
+        <dd>
+            <span>{{vm.estabelecimento.status}}</span>
+        </dd>
+        <dt><span data-translate="acaipdejhipsterApp.estabelecimento.dataAtualizacaoPreco">Data Atualizacao Preco</span></dt>
+        <dd>
+            <span>{{vm.estabelecimento.dataAtualizacaoPreco | date:'medium'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="estabelecimento-detail.edit({id:vm.estabelecimento.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

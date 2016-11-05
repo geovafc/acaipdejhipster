@@ -1,0 +1,26 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "estabelecimento",
+            "otherEntityName": "estabelecimento",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "numero",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "operadora",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161016162215",
+    "dto": "mapstruct",
+    "service": "no",
+    "entityTableName": "celular",
+    "pagination": "infinite-scroll"
+}

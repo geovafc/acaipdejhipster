@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="now" value="sysdate" dbms="oracle"/>
+
+    <property name="autoIncrement" value="true" dbms="mysql,h2,postgresql,oracle"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle"/>
+
+    <!--
+        Added the entity HorarioFuncionamento.
+    -->
+    <changeSet id="20161016162216-1" author="jhipster">
+        
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="horario_funcionamento"/>
+            </not>
+        </preConditions>
+        
+        <createTable tableName="horario_funcionamento">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="dia_inicio" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="dia_fim" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="horario_inicio" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="horario_fim" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="delivery" type="bit">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="estabelecimento" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="created_by" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_date" type="timestamp" defaultValueDate="${now}">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_modified_by" type="varchar(50)"/>
+            <column name="last_modified_date" type="timestamp"/>
+
+            <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
+        </createTable>
+        
+    </changeSet>
+    
+<!--    <changeSet id="20161016162216-2" author="Geovane">
+        
+ 
+        <renameColumn tableName="horario_funcionamento"  oldColumnName="horarioFim" newColumnName="horario_fim" columnDataType="varchar(255)"/>
+        <renameColumn tableName="horario_funcionamento" oldColumnName="horarioInicio" newColumnName="horario_inicio" columnDataType ="varchar(255)" />
+    
+    </changeSet>
+    
+    <changeSet id="20161016162216-4" author="Geovane">
+        
+        <preConditions onFail="MARK_RAN">            
+            <not>
+                <columnExists tableName="horario_funcionamento"  columnName="created_by" />
+            </not>
+        </preConditions>
+        
+        <addColumn tableName="horario_funcionamento" >
+            <column name="created_by" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+    
+        <addColumn tableName="horario_funcionamento">
+            <column name="created_date" type="timestamp" defaultValueDate="${now}">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+    
+        <addColumn tableName="horario_funcionamento">
+            <column name="last_modified_by" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+    
+        <addColumn tableName="horario_funcionamento">
+            <column name="last_modified_date" type="timestamp">
+                <constraints nullable="false"/>
+
+            </column>
+        </addColumn>
+     
+    </changeSet>-->
+    
+
+
+</databaseChangeLog>
